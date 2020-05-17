@@ -1,95 +1,40 @@
-const num = Math.random()
+/*const applyTax = price => price * 0.1
 
+const tax = appl
 
+const from = 'Japan'
 
-// console.log(num > 0.5)
-//if(num > 0.5) {
-   // console.log('大きめ')
-//}　else {
-   // console.log('小さめ')
-//}
-
-//console.log(`数: ${num}`)
-
-
-
-// if() {
-   //  console.log('truthy')
-// } else {
-//  console.log('falsy')
-// }
-
-
-const a = 2
-const b = 3
-const c = 4
-const d = 5
-
-console.log(a === b)
-console.log(a !== b)
-console.log(a < b)
-console.log(a <= b)
-console.log(a > b)
-console.log(a >= b)
-
-
-console.log(a === b && c === b)
-console.log(a === b || c === b)
-console.log(!(a === b))
-
-
-console.log(1 === "1")
-console.log(1 == "1")
-
-const score = Math.random() * 100
-
-console.log(`得点: &{srore}`)
-
-if(score >= 30) {
-    console.log('可')
-} else
-if(score >= 90) {
-    console.log('秀')
-} else 
-if(score >= 75) {
-    console.log('優')
-} else
-if(score >= 60) {
-    console.log('良') 
-} else {
-    console.log('不可')
+const yamada = {
+    id: 1,
+    lestName: 'yamada',
+    firstName: 'taro',
+    age: 24,
+    country: from
 }
 
-//for(let i = 0; i < 10; i++) {
-   // console.log(i)
-//}
-
-let s = 2
-
-while (s < 100000) {
-    console.log(s)
-    s = s * s
-}
-
-const friends = ['サーバル', 'フェネック', 'アライグマ']
-
-friends.forEach((friends) => {
-    console.log(friends)
-})
+Object.keys(yamada).forEach(key => {
+    console.log(`My ${key} is ${yamada[key]}.`)
+}) */
 
 
-function cook(food1, food2) {
-    console.log(food1 + 'を切ります。')
-    console.log(food1 + 'を炒めます。')
-    console.log(food2 + 'をすりおろします。')
-    console.log(food1 + 'に' + food2 + 'を混ぜます。')
-}
-cook('豚肉', '生姜')
+const users = [
+    { 
+        id: 1,
+        name: 'Taro',
+        comments: ['hello', 'world']
+    },
+    { 
+        id: 2, 
+        name: 'jiro', 
+        comments: ['looks good to me'] 
+    },  
+    { 
+        id: 3, 
+        name: 'saburo', 
+        comments: ['hi', 'yes'] 
+    },
+]
+const json = JSON.stringify(users)
 
+console.log(JSON.parse(json))
 
-function applyTax(price) {
-    const result = price * 0.1
-    return result
-}
-const priceApplyTax = 1000 + applyTax(1000)
-console.log(priceApplyTax)
